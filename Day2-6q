@@ -1,0 +1,11 @@
+import numpy as np
+from scipy.ndimage import uniform_filter1d
+
+# Given dataset
+data = np.array([3, 5, 8, 12, 7, 10, 15, 20, 18, 22, 25, 28, 30])
+
+# Apply box filter with window size 3
+filtered_data = uniform_filter1d(data, size=3)
+
+print("Original Data:", data)
+print("Filtered Data:", filtered_data)
